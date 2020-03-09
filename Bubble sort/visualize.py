@@ -14,7 +14,7 @@ f_arr = random.sample(arr, len(arr))
 generate = bubble_sort(f_arr)
 
 fig = plt.figure()
-
+os.mkdir('tmp')
 
 i = 0
 for frame in generate:
@@ -25,4 +25,4 @@ for frame in generate:
     cv2.imshow('Chalo', cv2.imread('tmp/frame.png'))
     cv2.waitKey(1)
 
-
+shutil.rmtree('tmp')
