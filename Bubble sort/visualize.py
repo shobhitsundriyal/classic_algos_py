@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-from bubble_sort import bubble_sort
+from sorting_algos import bubble_sort
 import random
 import cv2
 import numpy as np
