@@ -8,7 +8,7 @@ import shutil
 
 num_element = int(input('Enter no of elements '))
 
-arr = list(range(num_element+1))
+arr = list(range(1, num_element+1))
 f_arr = random.sample(arr, len(arr))
 
 generate = bubble_sort(f_arr)
@@ -17,9 +17,12 @@ fig = plt.figure()
 os.mkdir('tmp')
 
 i = 0
-for frame in generate:
+for j, k, frame in generate:
     i += 1
-    plt.bar(arr, height=f_arr)
+    barlist = plt.bar(arr, height=f_arr)
+    barlist[j].set_color('g')
+    barlist[k].set_color('g')
+    plt.axis('off')
     plt.savefig('tmp/'+ 'frame' +'.png')
     plt.clf()
     cv2.imshow('Chalo', cv2.imread('tmp/frame.png'))

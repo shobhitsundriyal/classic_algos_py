@@ -7,7 +7,7 @@ def bubble_sort(a):
             if arr[j] > arr[j+1]:
                 arr[j], arr[j+1] = arr[j+1], arr[j]
             
-            yield arr
+            yield j, j+1, arr
 
 #a = [88, 55,10,9,6,2,0,-4]
 #dabba = bubble_sort(a)
