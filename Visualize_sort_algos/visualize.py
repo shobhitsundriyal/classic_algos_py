@@ -18,6 +18,8 @@ elif choice == 2:
     generate = selection_sort(f_arr)
 
 fig = plt.figure()
+if os.path.exists('tmp'):
+    shutil.rmtree('tmp')
 os.mkdir('tmp')
 
 i = 0
